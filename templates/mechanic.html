@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>mechanic</title>
+    </head>
+    <body style="background-color: chocolate;" align="center">
+        <h1>MECHANIC</h1>
+        <table align="center">
+            <form action="" method="post">
+            <tr>
+                <th>Name</th>
+                <td><input type="text" name="name" id=""></td>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td><input type="text" name="latitude" id=""></td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td><input type="text" name="longitude" id=""></td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td><input type="text" name="phone" id=""></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="text" name="email" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" ></td>
+            </tr>
+        </table>
+    </form>
+    <table border="2" align="center">
+        <tr>
+            <th>name</th>
+            <th>latitude</th>
+            <th>longitude</th>
+            <th>phone</th>
+            <th>email</th>
+
+        </tr>
+        {%for i in abc['r']%}
+        <tr>
+            <td>{{i['name']}}</td>
+            <td>{{i['latitude']}}</td>
+            <td>{{i['longitude']}}</td>
+            <td>{{i['phone']}}</td>
+            <td>{{i['email']}}</td>
+
+            <td><a href="?action=update&id={{i['mechanic_id']}}">Update</a></td>
+            <td><a href="?action=delete&id={{i['mechanic_id']}}">Delete</a></td>
+
+        </tr>
+        
+
+        {%endfor%}
+    </table>
+    </body>
+</html>

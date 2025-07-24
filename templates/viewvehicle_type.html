@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <table border="2" align="center">
+        <tr>
+            <th>Type_name</th>
+        </tr>
+        {%for i in data['v_type']%}
+        <tr>
+            <td>{{i['type_name']}}</td>
+            <td><a href="?action=update&id={{i['vehicle_type_id']}}">Accept</a></td>
+            <td><a href="?action=delete&id={{i['vehicle_type_id']}}">Reject</a></td>
+        </tr>
+        
+
+        
+        {%endfor%}
+    </table>
+
+    
+      
+    
+     
+   
+    
+</body>
+</html>

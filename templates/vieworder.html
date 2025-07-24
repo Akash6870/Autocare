@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <h1>VIEW ORDERS</h1>
+    <table border="3" align="center">
+    <form action="" method="post"></form>
+    <tr>
+        <th>Total amt</th>
+        <th>data</th>
+        <th>status</th>
+        <th>quantity</th>
+        <th>amount</th>
+        <th>fname</th>
+        <th>lname</th>
+        <th>place</th>
+        <th>phone</th>
+        <th>email</th>
+    </tr>    
+    {%for i in valid['r']%}
+    <tr>
+        <td>{{i['total amount']}}</td>
+        <td>{{i['data']}}</td>
+        <td>{{i['status']}}</td>
+        <td>{{i['quantity']}}</td>
+        <td>{{i['amount']}}</td>
+        <td>{{i['fname']}}</td>
+        <td>{{i['lname']}}</td>
+        <td>{{i['place']}}</td>
+        <td>{{i['phone']}}</td>
+        <td>{{i['email']}}</td>
+
+        <td><a href="/vieworders?id={{i['user_id']}}"><br><br>View</a></td>
+    </tr>
+    {%endfor%}
+</table>
+</body>
+</html>

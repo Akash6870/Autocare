@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin</title>
+    </head>
+    <body>
+        <center><h1 style="color: aqua;">SPARE_PARTS</h1></center>
+        <center><table border="3"></center>
+            <tr>
+                <th>shop name</th>
+                <th>latitude</th>
+                <th>longitude</th>
+                <th>phone</th>
+                <th>email</th>
+            </tr>
+            {%for i in data['r']%}
+            <tr>
+                <td>{{i['shop name']}}</td>
+                <td>{{i['latitude']}}</td>
+                <td>{{i['longitude']}}</td>
+                <td>{{i['phone']}}</td>
+                <td>{{i['email']}}</td>
+
+                <td><a href="?action=accept&id={{i['login_id']}}">Accept</a></td>
+                <td><a href="?action=reject&id={{i['shop_id']}}">Reject</a></td>
+
+
+            </tr>
+            {%endfor%}
+
+        </table>
+       
+      </body>
+      </html>
